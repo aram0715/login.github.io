@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼만들기</title>
+    <link href="css/050.css" rel="stylesheet">
+</head>
+<body>
+    <div id="form"><!--id는 고유한거 한 개만 쓸 수 있다,class 여러개 가능-->
+        <form action="" method="post" autocomplete="off"><!-- < 자동완성 꺼주는거-->
+            <h2>회원가입양식</h2>
+            <fieldset><!--폼안에 그룹화 하는거-->
+                <legend>개인정보</legend>
+                <div>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder="이름을 입력해주세요" required autofocus>
+                    <!--placeholder 입력창이 어떤건지 힌트 주는거-->
+                    <!--id 는 문서 안에서 중복사용 불가 ,하나만 가능
+                    자바스크립트 프로그램 안에서 적용시키기 위해 사용 -->
+                    <!--
+                        placeholder : 입력창 안에 작성하는 힌트,도움말
+                        required : 필수사항
+                        autofocus: 입력창안에 커서가 자동으로 적용
+                    -->
+                </div>
+
+                <div>
+                    <label for="pw">비밀번호</label>
+                    <input type="password" id="pw" placeholder="비밀번호입력해주세요">
+                </div>
+
+                <div class="address">
+                    <label>주소</label>
+                    <input type="button" value="주소찾기">
+                    <input type="text" name="addr" id="addr1">
+                    <input type="text" name="addr"><!--id 는 하나만 쓸 수 있어서 name으로 그리고 
+                        같은 거라고 묶을때-->
+                </div>
+
+                <div>
+                    <label>성별</label>
+                    <input type="radio" name="gender" value="man"><span>남자</span>
+                    <input type="radio" name="gender" value="woman"><span>여자</span>
+                    <!--어떤게 편하게 아이콘 같은거 놓을 까 ux
+                         이걸 바탕으로 디자인 ui-->
+                     <!--value 이름 지어줄 수 있지만 또 구분할때 사용
+                    리디오 타입은 span 이 앞, 뒤로 순서를 다르게 하면 배치가 달라짐 
+                    체크박스가 앞,뒤로 배치가 됨-->
+                    <!--
+                        name : 그룹 묶음 사용, 프로그램쪽에서 name값을 가져올수 있음
+                        value : 해당하는 태그의 값, 각 해당하는 이름
+                        input에 다 사용 가능
+
+                        *name : 그린컴퓨터아카데미
+                        *value : 501호
+
+                        type="radio" : 1가지 선택
+                        type="checkbox" : 다중선택(1개이상)
+                    -->
+                </div>
+
+                <div class="drank">
+                    <label>음료</label>
+                    <div>
+                        <input id="coffee" type="checkbox" name="drank" value="coffee">
+                        <label for="coffee">커피</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="drank" value="icetea">
+                        <label>아이스티</label>
+                        <!--커피에 아이디,라벨에 이름 붙여져서 단어만 선택해도 선택이 되나
+                        나머지는 이름이 라벨에 없기때문에 체크박스만 가능 id=for 동일해야 text를
+                        눌러도 커피 이런 이름만 눌러도 체크박스에 적용가능-->
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="drank" value="latte">
+                        <label>라떼</label>
+                    </div>
+                        <!--<label> 
+                            <input type="checkbox">
+                            <span>커피</span>
+                        </label>-->
+                </div>
+
+                <div>
+                    <label>기타의견</label>
+                     <!--rows 세로 cols 가로,없어도 됨-->
+                    <textarea rows="5" cols="40">
+
+                    </textarea>
+                </div>
+
+                <div>
+                    <label>가입경로</label>
+                    <select>
+                        <option>검색</option>
+                        <option>카카오</option>
+                        <option>인스타그램</option>
+                        <option>기타</option>
+                        <optgroup label="검색경로">
+                            <option>네이버</option>
+                            <option>다음</option>
+                            <option>구글</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="button">
+                    <input type="reset" value="다시쓰기">
+                    <input type="submit" value="가입하기">
+                    <!--
+                        reset : 취소 다시쓰기
+                        submit : 동의, 제출,  확인
+                        button : 그냥 버튼 
+                    -->
+                </div>
+
+
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

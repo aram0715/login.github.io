@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스정렬 + 그림자 연습</title>
+    <style>
+        *{margin:0; padding: 0;}
+        li {list-style:none;}
+        a {text-decoration:none; color:#333;display:block;}
+        h2 {text-align:center;}
+
+        .header {
+            height:140px;
+            }
+
+       .header ul {
+           text-align:center;
+       }
+       .header li {
+           line-height: 140px;
+           display:inline-block;
+           margin: 0 40px;
+       }
+       .main_visual {
+           height:500px;
+           background-color:rgb(194, 192, 192);
+           position:relative;
+       }
+       .main_visual p{text-align:center;}
+       .main_visual .home {
+           font-size: 30px;
+       }
+       .main_visual .made {
+           width:100px;
+           height:30px;
+           background-color:black;
+           color:#fff;
+           position:absolute;
+           left:300px;
+           top:200px;
+       }
+       .wrap {
+           height: 800px;
+           background-color:rgb(11, 168, 142);
+           
+       }
+     
+       .wrap div {
+           display:inline-block;
+           border:3px solid #fff;
+           text-align:center;
+          
+       }
+       .wrap div h3 {color:#fff;}
+       .wrap div p {color:#fff;}
+
+      
+       .section dl {
+           width:380px;
+           height: 40px;
+           background-color: rgb(11,168,142);
+       }
+    </style>
+</head>
+<body>
+     <h2>로고</h2>
+     <div class="header">
+         <ul>
+             <li>ABOUT</li>
+             <li>HOME</li>
+             <li>SHOP</li>
+             <lI>CONTACT</lI>
+         </ul>
+     </div>
+          
+
+     <div class="main_visual">
+         <p class="home">100% NATURAL.
+             HOMEMADE
+             FRESH COOKIES.
+         </p>
+         <p class="made">shop now</p>
+     </div>
+
+
+
+     <div class="wrap">
+     <h2>첫번째 컨텐츠 제목</h2>
+     <div>
+         <img src="http://via.placeholder.com/590x550" alt="사진넣을곳"/>
+         <h3>상품소개이름</h3>
+         <p>상품소개상세설명</p>
+     </div>
+
+
+     <div>
+        <img src="http://via.placeholder.com/590x550" alt="사진넣을곳"/>
+        <h3>상품소개이름</h3>
+        <p>상품소개상세설명</p>
+    </div>
+
+     </div>
+
+
+   <div class="section">
+       <h2>첫번째 컨텐츠 제목</h2>
+        <img src="http://via.placeholder.com/380x500" alt="사진넣을곳"/>
+        <dl>
+            <dt>상품소개설명</dt>
+            <dd>상품소개상세설명</dd>
+        </dl>
+
+
+        <img src="http://via.placeholder.com/380x500" alt="사진넣을곳"/>
+        <dl>
+            <dt>상품소개설명</dt>
+            <dd>상품소개상세설명</dd>
+        </dl>
+
+
+        <img src="http://via.placeholder.com/380x500" alt="사진넣을곳"/>
+        <dl>
+            <dt>상품소개설명</dt>
+            <dd>상품소개상세설명</dd>
+        </dl>
+
+
+
+   </div>
+
+  
+
+
+</body>
+</html>

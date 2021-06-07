@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>홈페이지기본구조01</title>
+<style>
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+.header {
+               background-color: #38A1E8;
+               height: 80px;
+               
+}
+.nav {
+         text-align:center;
+}
+.nav ul li{
+               display:inline-block;
+          /**background-color: orange;**/
+              width: 120px;
+              line-height: 80px;
+       /**line-hgight는 글자 한 줄 일때만,높이가 동일하면 가운데로 옴**/
+              text-align:center;
+}
+.main__visual {
+                       height:500px;
+                       background-color:#4987FF;
+
+}
+.main__visual p{
+                         text-align:center;
+                         line-height:500px;
+                         color:#fff;
+}
+.content{
+             width: 1200px;
+             background-color:#3844E8;
+             margin:0 auto;
+
+}
+.content::after{
+                      content:'';
+                      display:block;
+                      clear:both;
+
+}
+.content div{
+                    height: 400px;
+                   float:left;
+
+}
+.content .box01{
+                          width:600px;
+                         background-color:#1FFF94;
+         }
+.content .box02{
+                  width:400px;
+                  background-color:#1CE8C1;
+ }
+.content .box03{
+                       width:200px;
+                       background-color:#2BEEFF;
+}
+.content .box04{
+                        width:1200px;
+                        background-color:#1CA1E8;
+}
+.footer{
+             height:100px;
+             line-height:100px;
+             background-color:#4F14FF;
+             text-align:center;
+
+}
+/**line-height 글자 글자 사이 여백**/
+</style>
+</head>
+<body>
+<div class="header">
+      <div class="nav">
+                   <ul>
+                            <li>menu01</li>
+                            <li>menu02</li>
+                            <li>menu03</li>
+                            <li>menu04</li>
+                  </ul>
+
+
+
+      </div>
+      
+
+</div><!--.header end--->
+
+<div class="main__visual">
+  <p>메인비주얼</p>
+</div>
+
+<div class="content">
+     <div class="box01">box01</div>
+     <div class="box02">box02</div>
+     <div class="box03">box03</div>
+     <div class="box04">box04</div>
+ 
+</div><!--.content end-->
+
+<div class="footer">
+     <p>footer</p>
+</div>
+
+
+
+</body>
+</html>

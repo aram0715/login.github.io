@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin: 0; padding: 0;}
+
+.header {
+            background-color:#1F71DE;
+            height:70px;
+}
+.header ul {text-align:center;}
+.header ul li{
+              display:inline-block;
+              line-height:70px;
+              margin: 0 40px;
+              color:#fff;
+}
+.main_visual {
+                     height:400px;
+                     background-color:#2E50F5
+
+}     
+.main_visual p{
+                      font-size: 60px;
+                      text-align:center;
+                      line-height:400px;
+}
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+li{font-family: 'Cafe24Oneprettynight';}
+p{font-family: 'GmarketSansMedium';}
+
+.wrap {
+           width:1200px;
+           margin: 0 auto;
+           
+}
+.wrap::after {
+                    content:'';
+                    display:block;
+                   clear: both;
+}
+.wrap dl {
+              width: 400px;
+              height: 400px;
+              background-color:#55B7ED;
+              float:left;
+              text-align:center;
+              padding:50px;
+              box-sizing: border-box;
+}/**내부여백을 주면 떨어지기 때문에 박스 크기를 포함해서 해야 떨어지지않음**/
+
+.wrap .box02 {background-color:#606BF5;}
+.wrap .box03 {background-color:#3372DE;}
+.wrap dl dt {font-size: 35px;
+                 margin-bottom: 40px;}
+.wrap dl dd {font-size: 17px;}
+
+
+.footer {
+              height:40px;
+              background-color:#16DEA2;
+              text-align:center;
+              line-height:40px;
+              color:#fff;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<ul>
+<li>menu01</li>
+<li>menu02</li>
+<li>menu03</li>
+<li>menu04</li>
+</ul>
+<div class="main_visual">
+<p>main_visual</p>
+</div><!--.main_visual end-->
+
+
+<div class="wrap">
+<dl class="box01">
+<dt>title</dt>
+<dd>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </dd>
+</dl>
+
+<dl class="box02">
+<dt>title</dt>
+<dd>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</dd>
+</dl>
+
+<dl class="box03">
+<dt>title</dt>
+<dd>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</dd>
+</dl>
+</div>
+<div><!--.wrap end-->
+<div class="footer">
+          footer
+</div>
+
+
+
+</body>
+</html>

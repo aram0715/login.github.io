@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        *{margin:0; padding:0;}
+        li {list-style: none;}
+        a {text-decoration: none; 
+        color: #333;
+        display:block;
+        }
+        h3 {
+             font-size: 45px;
+             text-align: center;
+        }
+        h3 span {
+            position: relative;
+        }
+        h3 span::before {
+            content:'';
+            width: 100%;
+            height: 15px;
+            background-color: rgba(89, 103, 230, 0.671);
+            position: absolute;
+            bottom :5px;
+            left:0;
+            z-index: -1; 
+            /*z-index 위치 설정
+               음수 => 뒤로보내기 -
+               양수 => 앞으로보내기 +
+               z-index는 position값이 있을 때 사용가능*/
+            /*밑줄은 스타일 적용하면 바꾸기 힘들어 빈영역 content 만들어서 함*/
+            /*before,after 밑줄,상자안에 글자 사이 장식 많이 사용*/
+        }
+        .box {
+               width: 500px;
+               border: 1px solid rgb(34, 62, 187);
+               padding: 50px;
+               text-align: center;
+               margin: 0 auto;
+
+        }
+        .box dl dt {
+                font-size: 30px;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 70px;
+        }
+        .box dl dt::before {
+                   content:'';
+                   width: 1px;
+                   height: 50px;
+                   background-color:rgb(28, 44, 116);
+                   position:absolute;
+                   top: 50px;
+                   left: 50%;
+                   /*dt은 블럭요소로 자기가 가지고 있는 영역만*/
+        }
+
+
+        .box01 {
+                   width: 500px;
+                   border: 1px solid rgb(5, 110, 49);
+                   text-align: center;
+                   padding: 50px;
+                   margin: 30px auto;
+        }
+
+        .box01 dl dt {
+                   font-size:30px;
+                   position: relative;
+                   display:inline-block;
+                   margin-bottom: 70px;
+        }
+
+        .box dl dd::after{
+                      content:'';
+                      width: 1px;
+                      height: 50px;
+                      background-color: rgb(16, 204, 88);
+                      position: absolute;
+                      top: 500px;
+                      left: 50%;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+      <h3>
+          <span>box-shadow: 박스 그림자</span>
+      </h3>
+      <div class="box">
+         <dl>
+             <dt>box-shadow</dt>
+             <dd> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</dd>
+         </dl>
+      </div>
+
+
+      <div class="box01">
+          <dl>
+              <dt>box-shadow</dt>
+              <dd>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</dd>
+          </dl>
+      </div>
+</body>
+</html>

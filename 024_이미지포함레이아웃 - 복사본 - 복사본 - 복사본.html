@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>이미지포함 레이아웃</title>
+<style>
+*{margin :0; padding:0;}
+li{list-style:none;}
+html, body {background-color: #0363FA;}
+
+.header {
+              height: 70px;
+              background-color:#18CFDE;
+}
+.header ul{
+                text-align:center;
+}
+.header ul li{
+                 display:inline-block;
+                 margin: 0 40px;
+                 line-height:70px;
+}
+
+.main_visual {
+                     height: 400px;
+                     background-color:#1CAFFA;
+}
+.main_visual p {
+                      font-size: 60px;
+                      color:#fff;
+                      text-align:center;
+                      line-height:400px;
+}
+.wrap {
+            width: 1200px;
+            background-color:#fff;
+            margin: 50px auto;
+}
+.wrap::after {
+                   content:'';
+                   display:block;
+                   clear:both;
+}
+.wrap div {
+                width:280px;
+                margin: 0 10px;
+                float:left;
+                background-color:blue;
+/**flaot를 이용해서 여백 없이 딱맞게**/
+}
+.wrap div img { width : 100%;}
+.wrap div p {
+                   font-size:20px;
+                   text-align:center;
+                   padding: 80px 50px;
+
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+ <ul>
+   <li>menu01</li>
+   <li>menu02</li>
+   <li>menu03</li>
+   <li>menu04</li>
+   <li>menu05</li>
+ </ul>
+</div>
+ 
+<div class="main_visual">
+<p>main_visual</p>
+</div><!--.main_visual end-->
+
+<div class="wrap">
+<div>
+<img src="img/img_01.jpg" alt="산위에 있는 사람"/>
+<p>이미지에 대한 내용이 들어갔어요</p>
+</div>
+
+<div>
+<img src="img/img_01.jpg" alt="산위에 있는 사람"/>
+<p>이미지에 대한 내용이 들어갔어요</p>
+</div>
+
+<div>
+<img src="img/img_01.jpg" alt="산위에 있는 사람"/>
+<p>이미지에 대한 내용이 들어갔어요</p>
+</div>
+
+<div>
+<img src="img/img_01.jpg" alt="산위에 있는 사람"/>
+<p>이미지에 대한 내용이 들어갔어요</p>
+</div>
+
+</div><!--.wrap end-->
+
+
+
+
+
+
+</body>
+</html>

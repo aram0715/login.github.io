@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디저트 카페</title>
+    <style>
+        @font-face {
+        font-family: 'TmonMonsori';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+        * {margin: 0; padding: 0;}
+        li {list-style:none;}
+        a {
+            text-decoration:none;
+            color:#333;
+            display:block;
+        }
+        .box {
+            width:600px;
+            height:900px;
+            background:url('img/img02.jpg') center center / cover no-repeat;
+        }
+        
+        .box .box_in {
+            padding: 120px 82px;
+            position:relative;
+            height:100%;
+            box-sizing:border-box;
+            /*height 에 padding 값이 있어서 border 한것같다*/
+            z-index:5;
+            display:none;
+            /*none 숨김처리*/
+        }
+        .box .box_in::before {
+            /*before 가상 선택자*/
+            content:'';
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0, .3);
+            position:absolute;;
+            top:0;
+            left:0;
+            z-index: -1;
+            /*position 있어야 하고 덮어지는 값으로 - 뒤로가기, + 앞으로가기
+            앞으로가기 수치가 많으면 앞으로 간다 z-index없으면 다 0이고  글자를 보이게
+            하기위해선 뒤로- 이미지 어둡게 앞으로+*/
+        }
+        .box_in p {
+            font-size: 25px;
+            background-color:#ffcc00;
+            text-align:center;
+            padding:10px 0;
+        }
+        .box_in h3 {
+            font-family: 'TmonMonsori';
+            font-size:92px;
+            color:#fff;
+            text-align:center;
+            letter-spacing:-1px;
+        
+        }
+        .box_in h3 span {
+            letter-spacing: 7px;
+            color:wheat;
+
+        }
+
+        .box:hover .box_in {
+            display:block;
+            /*box_in 하면 없는영역에 하는거므로 전체 영역 box에 한다*/
+        }
+       
+        /**일부 단어만 다른 스타일 입힐때=span**/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box_in">
+            <p>#인스타를 달군 대세 카페</p>
+            <h3>
+                디저트 카페<br />
+                <span>BEST 10</span>
+                
+            </h3>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

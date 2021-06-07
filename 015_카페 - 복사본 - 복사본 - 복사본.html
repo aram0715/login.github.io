@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang=="ko">
+<head>
+<meta charset="utf-8">
+<title>카페</title>
+<style>
+*{margin: 0; padding:0;}
+html,body{height: 100%;}
+.top {
+       background-color: #333;
+       height:100%;
+      text-align: center;
+}
+.top div{
+            transition: .5s; 
+           /**마우스 커서 떨어질때 효과**/
+             background-color: #fff;
+             width: 350px;
+             height: 220px;
+            margin:100px 10px;
+           padding:30px 10px;
+           text-align:center;
+           border-radius:0px 40px 0px 40px;
+            /** 이것도 같다=border-radiud: 0px 40px;**/
+          display:inline-block;
+         vertical-align: top;
+      /**vertical-align 세로 정렬
+       vertical-align:top(위),middle(가운데),bttom(아래)  =>inline,inline-block일때 사용가능**/
+}
+
+dl dt{
+        font-size:35px;
+        font-weight: bold;
+       margin-top:25px;
+      margin-bottom:10px;
+    /**이것도 같다=margin: 25px 0px 10px;**/
+}
+
+.top div:hover{
+                     background-color:orange;
+                     transition: 1s;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="top">
+      <div>
+      <img src="img/icon01.png" alt="커피 아이콘"/>
+        <dl>
+          <dt>cafe</dt>
+          <dd>cafe is my<br />have accessory</dd>
+       </dl>
+        </div>
+
+
+     <div>
+       <img src="img/icon02.png" alt="커피 아이콘"/>
+        <dl>
+          <dt>cafe</dt>
+          <dd>cafe is my<br />must have accessory</dd>
+        </dl>
+      </div>
+
+     <div>
+       <img src="img/icon03.png" alt="커피 아이콘"/>
+        <dl>
+         <dt>cafe</dt>
+         <dd>cafe is my<br />must have accessory</dd>
+        </dl>
+    </div>
+
+
+  
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>>

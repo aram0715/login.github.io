@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+* {margin:0; padding:0;}
+li {list-style:none;}
+a {
+    text-decoration:none;
+    color:#333;
+    display:block;
+}
+fieldset {
+    border:0;
+}
+legend {
+    position:absolute;
+    left:-99999px;
+}
+#form {
+    width:600px;
+    border:1px solid #333;
+    margin:50px auto;
+    padding:50px;
+}
+#form fieldset > div {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+#form fieldset > div > label {
+    width: 150px;
+    font-weight:bold;
+    /* background-color:royalblue; */
+    text-align: right;
+    /*display:inline-block;*//*label inline요소*/
+    /*안에 있는 label에 다 적용되는데 하나만 적용되게는
+     ,> 꺽새쓸 때 =부모쓰고 자식 써서 적용,자식한테만 적용!
+      > 자식선택,자식한테만 다르게 스타일 입혀줄때 태크는 비슷한거 많고
+    */
+    float:left;
+    line-height:32px;/*border 각 1px씩 그래서 32px*/
+    margin-right:10px;
+}
+
+input[type="text"],input[type="password"] {
+    width:300px;
+    height:30px;
+    margin-bottom: 5px;
+    border: 1px solid #000;
+    /*두개 이상 , 필수! style태그에서*/
+    padding:0 10px;/*안에 커서나 이름을 입력하세요 띄우고 싶을때 padding*/
+    box-sizing:border-box;
+}
+input[type="text"]::placeholder {
+    font-size:12px;
+    color:#ddd;
+}
+input[type="button"] {
+    width:300px;
+    height:30px;
+    background-color:red;
+    color:#fff;
+    border:1px solid #000;
+    margin-bottom: 5px;
+}
+.address input[type="text"]{
+    margin-left:160px;
+}
+.drank div {
+    display:inline-block;/*<인라인 블럭은 가지고 있는 간격이 있음*/
+    line-height:32px;
+}
+textarea {
+    resize: none;
+    width: 300px;
+}
+select {
+    height: 40px;
+    width: 200px;
+}
+.button {
+    text-align:center;
+    margin-top:40px;
+}
+.button input[type="reset"]{
+    width: 120px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color:#fff;
+}
+.button input[type="submit"]{
+    width:120px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color:royalblue;
+    color:#fff;
+
+}
+/* #form span { 
+    line-height:32px;
+}*/
+/*= + 바로 뒤에 있는 형제 선택자 태그적에서*/
+input[type="radio"]+span {
+    line-height:32px;
+}
+
+/*1.submit 버튼 스타일 적용
+2.submit 과 reset 버튼을 묶어서 가운데 배치*/

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>포지션</title>
+<style>
+*{margin: 0; padding: 0;}
+
+.wrap {
+            width: 400px;
+            height: 1000px;
+            background-color:#46D48C;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+            /*relative 를 중심으로해서 박스안에서 움직이도록 나가면 - */
+}
+
+.wrap p{
+              width: 100px;
+              height: 100px;
+              position:absolute;
+           /*relative 는 자기가 중심축으로 되서 다른 영향을 받지않고 움직임*/
+
+}
+
+.wrap .box01 {
+                   background-color:#53F5B4;
+                   right: -100px;
+                   top: 0;
+}
+.wrap .box02 {
+                            background-color:#60D444;
+                            bottom: -100px; 
+                         /*=top: 400px;*/
+                            right: 0;
+                         /*top 과 bottom 같이 쓸 수 없다 충돌때문에 그리고 위에서 밑으로 html 적용,top 와 bottom은 위치*/
+}
+.wrap .box03 {
+                       background-color:#56EB70;
+                       bottom: 0;
+                       left: -100px;
+
+}
+.wrap .box04 {
+                      background-color:#E0F740;
+                      left: 0;
+                      top: -100px;
+}
+.wrap .box05 {
+                      background-color:#C2F74F;
+                      position: fixed;        
+                  /*화면 브라우저를 중심으로 생긴다*/
+                      top: 50px;
+                      left: 50px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+             <p class="box01">01</p>
+             <p class="box02">02</p>
+             <p class="box03">03</p>
+             <p class="box04">04</p>
+             <p class="box05">05</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+

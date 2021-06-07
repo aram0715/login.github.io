@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스정렬_그림자</title>
+</head>
+<style>
+* {margin:0; padding: 0;}
+  li {list-style: none;}
+  a {text-decoration:none; color: #333; display:block;}
+  h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+  }
+  .section::after {
+        content:'';
+        display:block;
+        clear:both;
+
+  }
+
+
+  .section {
+          width: 1200px;
+          background-color:rgb(221, 197, 219); 
+          margin: 0 auto;
+  }
+  .section div {
+      width:285px;
+      background-color:rgb(233, 147, 166);
+      float: left;
+      margin-right: 20px;
+      border-radius: 20px;
+      overflow:hidden;
+      /*튀어 보이는 영역 숨김처리*/
+      box-shadow: 0px 0px 20px rgb(61, 61, 61);
+     /*x축 y축 다 0으로하면 네면 다 그림자 된다*/
+      /*float 하면 백그라운드 배경 안보인다 이 영역때문에 
+      그래서 clear both해야함*/
+     
+  }
+  .section div:last-child {
+      margin-right:0;
+  }
+  .section div img {
+      width:100%;
+      }
+  .section div dl {
+      padding: 20px;
+      color: #fff;
+  }    
+   .section dl dt {
+       font-size: 24px;
+       }   
+</style>
+<body>
+    <h2>박스정렬 + 그림자</h2>
+    <div class="section">
+       <div>
+           <img src="img/flower.JPG" alt="안개꽃"/>
+           <dl>
+               <dt>title</dt>
+               <dd>It is a long established fact that a reader will be distracted by 
+                   the readable content of a page when looking at its layout. 
+                   The point of using Lorem Ipsum is that 
+                   it has a more-or-less normal distribution of letters, 
+                   as opposed to using 'Content here, content here', 
+                   making it look like readable English.</dd>
+           </dl>
+       </div>
+
+
+       <div>
+        <img src="img/flower.JPG" alt="안개꽃"/>
+        <dl>
+            <dt>title</dt>
+            <dd>It is a long established fact that a reader will be distracted by 
+                the readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that 
+                it has a more-or-less normal distribution of letters, 
+                as opposed to using 'Content here, content here', 
+                making it look like readable English.</dd>
+        </dl>   
+      </div>
+
+
+
+
+
+    <div>
+        <img src="img/flower.JPG" alt="안개꽃"/>
+        <dl>
+            <dt>title</dt>
+            <dd>It is a long established fact that a reader will be distracted by 
+                the readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that 
+                it has a more-or-less normal distribution of letters, 
+                as opposed to using 'Content here, content here', 
+                making it look like readable English.</dd>
+        </dl> 
+    </div>
+
+
+
+
+
+     <div>
+        <img src="img/flower.JPG" alt="안개꽃"/>
+        <dl>
+            <dt>title</dt>
+            <dd>It is a long established fact that a reader will be distracted by 
+                the readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that 
+                it has a more-or-less normal distribution of letters, 
+                as opposed to using 'Content here, content here', 
+                making it look like readable English.</dd>
+        </dl>
+     </div><!-- .section end -->
+
+    </div>
+</body>
+</html>

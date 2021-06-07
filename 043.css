@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+* {margin:0 ;padding:0;}
+li {list-style:none;}
+a {
+    text-decoration:none;
+    color:#333;
+    display:block;
+}
+.main_visual {
+    height: 700px;
+    background:url('../img/img_02.jpg') center center / cover no-repeat;
+    position:relative; 
+}
+.main_visual::before {
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+    /* 밑에 포지션과 같은거 display:block; 검은 화면 그대로 할꺼면 */
+    position:absolute;
+    left:0;
+    top:0;
+    /*커서를 올려서 다르게 할꺼면 ^ 이 방법*/
+}
+.main_visual div {
+    /* background-color:rgba(0,0,0,.5); */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    /*두 개의 글이 있을때 가운데 정열*/
+
+}
+.main_visual h2 {
+    font-size:50px;
+    letter-spacing: 30px;
+}
+.main_visual p {
+    width: 300px;
+    height: 60px;
+    background-color:royalblue;
+    text-align:center;
+    color:#fff;
+    font-size:20px;
+    letter-spacing: 5px;
+    margin:0 auto;
+    line-height:60px;
+}

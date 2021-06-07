@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="uft-8">
+<title>포지션01-absolute</title>
+<style>
+*{margin:0; padding:0;}
+
+.wrap{
+   width:400px;
+   height:400px;
+   background-color:#99A3BC; 
+   margin:150px auto;     /**margin-top:150px;해도됨**/
+   position:relative;
+}
+
+
+.wrap p{
+   position:absolute;     /**엡솔루트를 적용할려면 부모에게 position:relative;적용**/
+   
+   width:100px;
+   height:100px;
+}
+
+
+
+.wrap .box01{
+   background-color:#F294AD;
+   top: 0;
+   right: -100px;
+  /*left: 400px;*/
+}
+
+.wrap .box02{
+   background-color:#F2A2B8;
+   right: 0;
+  bottom: -100px;
+}
+
+.wrap .box03{
+   background-color:#91B7D9;
+   bottom: 0;
+  left: -100px;
+
+}
+
+.wrap .box04{
+                       background-color:#30CFF2;
+                       top: -100px;
+}
+.wrap .box05{
+                     background-color:#2EDFF2;
+
+
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+   <p class="box01">01</p>
+   <p class="box02">02</p>
+   <p class="box03">03</p>
+   <p class="box04">04</p>
+   <p class="box05">05</p>
+
+</div>
+</body>
+</html>

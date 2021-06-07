@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체그,라디오버튼 스타일변경</title>
+    <style>
+        .check input[type="checkbox"] {
+            display:none;
+        }
+        .check input[type="checkbox"]+label {
+            display:inline-block;/* input 인라인 요소고 웬만한 width나 height 
+            했는데 안먹힌다 display:line=block 함*/
+            width:20px;
+            height: 20px;
+            background-color:#fff;
+            border: 1px solid #ddd;
+            box-sizing: border-box
+        }
+        .check input[type="checkbox"]:checked + label {
+            background-color:royalblue;
+            border: 1px solid royalblue;
+            /*check 은 커서 올리면 다르게 변하는 hover 비슷한거*/
+        }
+        .check {
+            position:relative;
+        }
+        .check span {
+            position:absolute; /*span 영역이 있어서 세로로 떨어짐 그래서 포지션으로*/
+            top:0;
+            left:28px;
+        }
+
+        .radio input[type="radio"] {
+            display:none; /*가지고 있는 스타일 없애는거*/
+        }
+        .radio input[type="radio"]+label {
+            display:inline-block;
+            width:150px;
+            height:40px;
+            line-height:40px;
+            border:2px solid #ddd;
+            text-align:center;
+
+        }
+        .radio input[type="radio"]:checked + label {
+            border: 2px solid rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="check">
+        <div>
+            <input type="checkbox" id="ch" name="" value="">
+            <label for="ch">
+                <span>체크박스</span><!-- id = label for 같이 같으면 체크박스만 
+                    클릭해도 적용 된다-->
+            </label>
+        </div>
+
+    
+    </div><!-- .check end-->
+    
+
+    <div class="radio">
+        <input type="radio" id="ra" name="gender" value="man">
+        <label for="ra">남자/여자</label>
+
+        <input type="radio" id="ra01" name="gender" value="woman">
+        <label for="ra01">남자/여자</label>
+    </div>
+</body>
+</html>

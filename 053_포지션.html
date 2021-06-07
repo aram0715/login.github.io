@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed + sticky</title>
+    <style>
+        *{margin:0; padding:0;}
+        li {list-style:none;}
+        a {
+            text-decoration:none;
+            color:#333;
+            display:block;
+        }
+        nav {
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .cont {
+            border: 1px solid #000;
+            margin-top:10px;
+        }
+        .inline-block {
+            display:inline-block;/*display:inline-block 가로정렬!*/
+            /*같은 class 값이 inline-block 이거라서 같이 적용*/
+        }
+        .cont > div > div {
+            width:200px;
+            height: 45px;
+            line-height:45px;
+            text-align:center;
+            background-color:royalblue;
+            color:#fff;
+        }
+        .cont .sideber {
+            height: 2000px;
+        }
+        /*태그 < 클래스명 < 아이디명< !important(제일 대빵)
+          1점        2점           5점          100점
+
+            .cont div div 는  태그와 클래스명 = 4점이고
+            .static 는 2 점이므로 더 커야된다 그래서 클래스 
+            명 더 적어주거나 등해서 스타일 먹히게*/
+        .sideber .static {
+            background-color:salmon;
+            position: static;/*기본값이라 다른거 적용 안해도됨*/
+            top:0;
+        }
+        .sideber .fixed {
+            background-color:skyblue;
+            position: fixed;
+            top: 110px;
+            left:410px;
+            /*브라우저 화면에서 나타남*/
+        }
+        .sideber .sticky {
+            background-color:seagreen;
+            position:sticky;
+            top: 0;
+            /*부모값에서만 나타남*/
+        }
+        /*<div class="class01 class02" (class명 사용할 때)>
+
+        .class01
+        .class02
+        =
+        div.class01
+        div.class02
+
+        .class01.class02 =띄어쓰면 다른 태그를 적용하므로 '붙여서' 적용
+
+        div.class01 {color:red;}
+        class01{color:blue;}
+        ==>컬러 값은 red로 적용됨 점수가 더 높아서
+        */
+
+
+        /*
+        position:sticky가 적용되지 않을 때
+        부모, 조상에 overflow 속성이 있을때 동장하지 않음
+        overflow:hidden;
+        overflow:scroll;
+        overflow:auto;
+        -------------------------------------------------------
+        부모에게 height값이 있어야 설정가능
+        height:%값이면 동장하지 않음
+        height: auto;
+        height: unset;
+        height: 100vh;
+        height: 1000px;
+        height: 5em;
+        height: 5rem;
+        다 적용 가능  
+        */
+  
+    </style>
+</head>
+<body>
+    <!--
+        static : 기본값 (기본값이다가 스크롤 내리면 sticky 하면 변한다)
+    -->
+    <nav>네비게이션</nav>
+    <div class="cont">
+        <div class="sideber">
+            <div class="inline-block static">static</div>
+            <!-- class 명 두개 할때는 띄어서 쓰기-->
+            <div class="inline-block fixed">fixed</div>
+            <div class="inline-block sticky">sticky</div>
+
+        </div><!--.sideber end-->
+    </div><!--.cont end-->
+</body>
+</html>

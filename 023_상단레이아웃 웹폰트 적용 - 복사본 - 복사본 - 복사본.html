@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>웹폰트 적용02</title>
+<style>
+*{margin: 0; padding: 0;}
+
+.header {
+            background-color:#1F71DE;
+            height:70px;
+}
+.header ul {text-align:center;}
+.header ul li{
+              display:inline-block;
+              line-height:70px;
+              margin: 0 40px;
+              color:#fff;
+}
+
+
+.main_visual {
+                     height:400px;
+                     background-color:#2E50F5
+
+}     
+.main_visual p{
+                      font-size: 60px;
+                      text-align:center;
+                      line-height:400px;
+}
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+li{font-family: 'Cafe24Oneprettynight';}
+p{font-family: 'GmarketSansMedium';}
+</style>
+</head>
+<body>
+<div class="header">
+<ul>
+<li>menu01</li>
+<li>menu02</li>
+<li>menu03</li>
+<li>menu04</li>
+<li>menu05</li>
+</ul>
+
+</div>
+
+<div class="main_visual">
+<p>main_visual</p>
+</div>
+
+
+</body>
+</html>

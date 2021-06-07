@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직접 만든 페이지</title>
+    <style>
+        * {margin:0; padding:0;}
+        li {list-style:none;}
+        a {   
+            text-decoration:none;
+            color:#333;
+            display:block;
+        }
+        body {background:url('img/서울도시.jpg') center center 
+        /cover no-repeat;
+        height:1020px;
+        } 
+
+        fieldset {border:0;}
+
+        legend {
+            position:absolute;
+            left:-99999px;
+        }
+
+        .wrap {
+            width:640px;
+            margin:0 auto;
+            margin-top: 176px;
+            height:800px;
+            background-color:rgba(255, 255, 255, 0.4);
+            text-align:center;
+        }
+        .wrap h3 {
+            font-size:60px;
+            font-weight:bold;
+            margin-bottom:40px;
+            margin-top:50px;
+            
+        }
+        .wrap h3 a {color:#fff;}
+        .wrap label {
+            position:absolute;
+            left:-99999px;
+
+        }
+        input[type="text"],input[type="password"] {
+            width:400px;
+            height:30px;
+            margin:10px 0;
+            padding:0 10px;
+
+        }
+        input[type="text"]:focus,input[type="password"]:focus {
+            border:0 transparent;
+            outline: 0 transparent;
+        }
+        button {
+            border:0;
+            border-radius:20px;
+        }
+        .but01 {
+            font-size:17px;
+            background-color:0;
+            margin-top:20px;
+            margin-right:60px;
+        }
+        .but02 {
+            font-size:17px;
+            background-color:0;
+        }
+        .but03 {
+            width:400px;
+            height:45px;
+            background-color:#DBA616;
+            font-size:17px;
+            color:#333;
+            margin-top:50px;
+        }
+        .but04 {
+            width:400px;
+            height:45px;
+            margin-top:30px;
+            font-size:20px;
+            background-color:#19CE60;
+            color:#fff;
+            
+        }
+        .but05 {
+            width:400px;
+            height:45px;
+            font-size:15px;
+            background-color:#FAE100;
+            color:#333;
+            margin-top:25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form action="" method="post">
+            <h3>
+                <a href="#">안녕하세요!</a> 
+            </h3>
+        
+        <fieldest>
+            <legend>로그인 페이지</legend>
+
+            <div>
+                <label for="id">아이디</label>
+                <input type="text" id="id" placeholder="아이디">
+            </div>
+
+            <div>
+                <label for="pass">비밀번호</label>
+                <input type="password" id="pass" placeholder="비밀번호">
+            </div>
+
+            <button class="but01">아이디 찾기</button>
+            <button class="but02">비밀번호 찾기</button>
+            <button class="but03">Sign In</button>
+            <button class="but04">N</button>
+            <button class="but05">KaKao</button>
+        </fieldest>
+        </form>
+
+    </div>
+</body>
+</html>

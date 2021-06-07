@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+* {margin: 0; padding: 0;}
+.bg01 {
+           height: 500px;
+           border: 10px dotted blue;
+           padding: 50px;
+           margin: 40px 0;
+           background-image: url('img/img_02.jpg');
+           background-repeat: no-repeat;
+/*repeat=이미지반복
+  no-repeat=이미지 반복 없음
+  repeat-x=이미지 x축 가로로 반복
+  repeat-y=이미지 y축 세로로 반복*/
+         
+           background-position: center center;
+           /*                             x축      y축
+           배경이미지위치: x  y;
+             left, right, top, bottom, center, px, %   */
+            
+         background-size: cover;
+                                           /*auto=자동,100% auto는 자동으로 화면 사이즈에 따라 사진 사이즈가 달라진다
+                              배경이미지사이즈: px, %
+                              contain : 박스안에 이미지가 다 들어갈 수                             있도록 확대 또는 축소
+                              cover : 이미지로 박스를 다 덮을 수 있도록                               확대 또는 축소  
+               */
+           background-attachment: fixed;
+          /*
+             화면스크롤할 때 배경이미지 동작
+           scroll : 스크롤, fixed: 고정
+*/
+}
+
+.bg02 {
+            height: 800px;
+            background: url('img/img_02.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            
+}
+
+.bg03 {
+           height: 500px;
+          background: url('img/img_02.jpg') center center /           cover no-repeat; 
+}
+.bg03 p {
+              width: 500px;
+              margin: 0 auto;
+              line-height: 500px;
+              text-align: center;
+              font-size: 40px;
+              background-color: rgba(255, 255, 255, .7);
+              
+}
+.bg04 {
+            height:500px;
+            background : url('img/img_02.jpg') center center /
+                               cover no-repeat;
+}
+.bg04 p {
+              width:500px;
+              margin: 0 auto;
+              text-align:center;
+              line-height: 500px;
+              background-color: rgba(71, 134, 237, 93);
+              font-size: 40px;
+
+}
+</style>
+</head>
+<body>
+
+<div class="bg01">
+    배경이미지
+</div>
+
+<div class="bg02">
+   배경이미지02
+</div>
+
+<div class="bg03">
+   <p>글자적용합시다</p>
+</div>
+
+<div class="bg04">
+<p>배경화면설정</p>
+</div>
+
+
+
+
+</body>
